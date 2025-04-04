@@ -92,41 +92,21 @@
         </plugins>
     </build>
     
-    <dependencies>
+<dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
             <artifactId>mule-http-connector</artifactId>
-            <version>1.5.23</version>
+            <version>1.7.1</version>
             <classifier>mule-plugin</classifier>
         </dependency>
         <dependency>
             <groupId>org.mule.connectors</groupId>
             <artifactId>mule-sockets-connector</artifactId>
-            <version>1.2.0</version>
+            <version>1.2.2</version>
             <classifier>mule-plugin</classifier>
-        </dependency>
-        <dependency>
-            <groupId>com.mulesoft.munit</groupId>
-            <artifactId>munit-runner</artifactId>
-            <version>2.3.2</version>
-            <classifier>mule-plugin</classifier>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.mulesoft.munit</groupId>
-            <artifactId>munit-tools</artifactId>
-            <version>2.3.2</version>
-            <classifier>mule-plugin</classifier>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mule.weave</groupId>
-            <artifactId>assertions</artifactId>
-            <version>1.0.2</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
-    
+    <!-- Define repositories -->
     <repositories>
         <repository>
             <id>anypoint-exchange-v3</id>
@@ -139,6 +119,18 @@
             <name>MuleSoft Releases Repository</name>
             <url>https://repository.mulesoft.org/releases/</url>
             <layout>default</layout>
+        </repository>
+        <repository>
+            <id>MuleRepository</id>
+            <name>MuleRepository</name>
+            <url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
     <pluginRepositories>
@@ -160,4 +152,5 @@
             <layout>default</layout>
         </repository>
     </distributionManagement>
+    
 </project>
